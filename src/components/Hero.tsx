@@ -8,12 +8,11 @@ import {
   ArrowRight,
   ExternalLink,
   ShieldCheck,
-  Cpu,
-  Layers,
+  Scale,
+  FileCheck2,
   Sparkles,
   Bot,
   Zap,
-  Network,
   Database,
   FileText,
 } from "lucide-react";
@@ -155,47 +154,70 @@ export default function Hero() {
           </a>
         </motion.div>
 
-        {/* System Architecture Focus Card (Wide Showcase) */}
+        {/* Flagship Product Showcase Card: MyLegalSahayak */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="mx-auto max-w-5xl rounded-3xl border border-white/15 bg-[#12151A]/85 p-6 sm:p-8 text-left shadow-2xl backdrop-blur-xl"
+          className="mx-auto max-w-5xl rounded-3xl border border-cyan-500/25 bg-[#12151A]/85 p-6 sm:p-8 text-left shadow-[0_20px_60px_rgba(0,0,0,0.6)] backdrop-blur-xl"
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-6 space-y-3">
+            <div className="lg:col-span-6 space-y-4">
               <div className="flex items-center gap-2">
                 <span className="font-mono text-xs font-semibold uppercase tracking-widest text-cyan-400">
-                  System Architecture Focus
+                  FLAGSHIP LIVE PLATFORM
                 </span>
-                <span className="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 text-[10px] font-mono border border-emerald-500/20">
-                  PRODUCTION READY
+                <span className="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 text-[10px] font-mono border border-emerald-500/20 flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  ACTIVE PRODUCTION
                 </span>
               </div>
-              <h3 className="text-2xl font-bold tracking-tight text-white leading-snug">
-                Multimodal RAG &amp; Autonomous Agent Systems
+              <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-white leading-snug">
+                MyLegalSahayak — Grounded Legal AI Platform
               </h3>
               <p className="text-sm sm:text-base text-[#A7ADB7] leading-relaxed">
-                Architecting hybrid retrieval systems (FAISS + GraphRAG) with MonoVLM cross-modal reranking, Claude MCP tooling, and deterministic legal guardrails.
+                Architected an AI legal assistant grounded on <strong className="text-white">400+ Indian statutory acts</strong> with deterministic relevance guardrails, 25MB PDF contract risk scanning, and zero-hallucination Gemini API synthesis.
               </p>
 
-              <div className="flex flex-wrap items-center gap-2 pt-2">
-                <div className="flex items-center gap-1.5 rounded-full bg-white/[0.06] px-3.5 py-1.5 text-xs font-mono text-white border border-white/10 cursor-default">
-                  <Layers className="h-3.5 w-3.5 text-purple-400" />
-                  <span>Multimodal RAG</span>
+              {/* Capability Pills */}
+              <div className="flex flex-wrap items-center gap-2 pt-1">
+                <div className="flex items-center gap-1.5 rounded-full bg-cyan-950/40 px-3.5 py-1.5 text-xs font-mono text-cyan-300 border border-cyan-500/30 cursor-default">
+                  <Scale className="h-3.5 w-3.5 text-cyan-400" />
+                  <span>400+ Indian Acts</span>
                 </div>
-                <div className="flex items-center gap-1.5 rounded-full bg-white/[0.06] px-3.5 py-1.5 text-xs font-mono text-white border border-white/10 cursor-default">
-                  <Network className="h-3.5 w-3.5 text-blue-400" />
-                  <span>5-Agent Cluster</span>
+                <div className="flex items-center gap-1.5 rounded-full bg-purple-950/40 px-3.5 py-1.5 text-xs font-mono text-purple-300 border border-purple-500/30 cursor-default">
+                  <FileCheck2 className="h-3.5 w-3.5 text-purple-400" />
+                  <span>25MB PDF Risk Parser</span>
                 </div>
-                <div className="flex items-center gap-1.5 rounded-full bg-white/[0.06] px-3.5 py-1.5 text-xs font-mono text-white border border-white/10 cursor-default">
+                <div className="flex items-center gap-1.5 rounded-full bg-emerald-950/40 px-3.5 py-1.5 text-xs font-mono text-emerald-300 border border-emerald-500/30 cursor-default">
                   <ShieldCheck className="h-3.5 w-3.5 text-emerald-400" />
-                  <span>Deterministic Guardrails</span>
+                  <span>Relevance Guardrails</span>
                 </div>
-                <div className="flex items-center gap-1.5 rounded-full bg-white/[0.06] px-3.5 py-1.5 text-xs font-mono text-white border border-white/10 cursor-default">
-                  <Zap className="h-3.5 w-3.5 text-cyan-400" />
-                  <span>MCP Protocol</span>
+                <div className="flex items-center gap-1.5 rounded-full bg-blue-950/40 px-3.5 py-1.5 text-xs font-mono text-blue-300 border border-blue-500/30 cursor-default">
+                  <Bot className="h-3.5 w-3.5 text-blue-400" />
+                  <span>Gemini Grounding</span>
                 </div>
+              </div>
+
+              {/* CTAs inside Hero showcase */}
+              <div className="flex flex-wrap items-center gap-3 pt-3">
+                <a
+                  href="https://www.mylegalsahayak.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-cyan-400 text-black text-xs font-bold hover:bg-cyan-300 transition-all shadow-[0_0_20px_rgba(6,182,212,0.3)] active:scale-95"
+                >
+                  <span>Visit MyLegalSahayak</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+
+                <Link
+                  href="/case-studies/mylegalsahayak"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#171A20] hover:bg-white/10 border border-white/10 text-white text-xs font-semibold transition-colors active:scale-95"
+                >
+                  <span>Read Case Study</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
               </div>
             </div>
 
