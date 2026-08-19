@@ -65,11 +65,13 @@ export default function About() {
 
         {/* 3-Column Grid Matching Reference */}
         <div className="grid gap-8 lg:grid-cols-12 lg:gap-12 mt-10 items-start">
-          {/* Column 1: Portrait Profile Card */}
+          {/* Column 1: Portrait Profile Card with Floating Glass Name Tag */}
           <div className="lg:col-span-4 flex items-start justify-center">
             <div className="relative group w-full max-w-[340px]">
-              <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-purple-600/40 via-blue-600/30 to-cyan-500/30 opacity-0 group-hover:opacity-100 blur-lg transition-opacity duration-500 pointer-events-none" />
-              <div className="relative overflow-hidden rounded-2xl border border-white/15 bg-[#12151A] shadow-xl group-hover:border-purple-500/50 transition-colors duration-500">
+              {/* Outer Glow */}
+              <div className="absolute -inset-1 rounded-3xl bg-gradient-to-br from-purple-600/40 via-blue-600/30 to-cyan-500/30 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 pointer-events-none" />
+              
+              <div className="relative overflow-hidden rounded-3xl border border-white/15 bg-[#12151A] shadow-2xl group-hover:border-purple-500/50 transition-colors duration-500">
                 <div className="relative aspect-[4/5] w-full overflow-hidden">
                   <Image
                     src="/aditya-profile.png"
@@ -78,16 +80,31 @@ export default function About() {
                     className="object-cover object-top scale-105 group-hover:scale-110 transition-transform duration-500"
                     priority
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#08090B]/80 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#08090B]/90 via-[#08090B]/20 to-transparent pointer-events-none" />
                 </div>
-                <div className="p-4 text-center border-t border-white/[0.08] bg-[#0D0F12]">
-                  <p className="font-mono text-xs font-semibold uppercase tracking-widest text-white">
-                    Aditya Wadhwa
-                  </p>
-                  <p className="mt-0.5 text-xs text-cyan-400 font-mono">
+
+                {/* Floating Glassmorphic Name Tag */}
+                <motion.div
+                  animate={{
+                    y: [0, -5, 0],
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                  className="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl bg-[#0D0F12]/85 backdrop-blur-xl border border-white/15 shadow-[0_10px_30px_rgba(0,0,0,0.6)] text-center group-hover:border-cyan-500/40 transition-colors"
+                >
+                  <div className="flex items-center justify-center gap-1.5 mb-0.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
+                    <p className="font-mono text-xs font-bold uppercase tracking-widest text-white">
+                      ADITYA WADHWA
+                    </p>
+                  </div>
+                  <p className="text-xs text-cyan-400 font-mono tracking-tight">
                     AI &amp; LLM Systems Engineer
                   </p>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>
