@@ -167,10 +167,6 @@ export default function Hero() {
                 <span className="font-mono text-xs font-semibold uppercase tracking-widest text-cyan-400">
                   FLAGSHIP LIVE PLATFORM
                 </span>
-                <span className="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 text-[10px] font-mono border border-emerald-500/20 flex items-center gap-1">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                  ACTIVE PRODUCTION
-                </span>
               </div>
               <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-white leading-snug">
                 MyLegalSahayak — Grounded Legal AI Platform
