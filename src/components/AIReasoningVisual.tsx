@@ -89,24 +89,6 @@ export default function AIReasoningVisual() {
       <div className="absolute -top-24 -right-24 w-64 h-64 bg-cyan-600/15 blur-[60px] rounded-full pointer-events-none" />
       <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-purple-600/15 blur-[60px] rounded-full pointer-events-none" />
 
-      {/* Header bar */}
-      <div className="flex items-center justify-between pb-4 border-b border-white/[0.08] mb-5">
-        <div className="flex items-center gap-2">
-          <div className="flex gap-1.5">
-            <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
-            <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
-          </div>
-          <span className="text-xs font-mono text-[#A7ADB7] ml-2">
-            mylegalsahayak_pipeline.py
-          </span>
-        </div>
-        <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-cyan-950/40 border border-cyan-500/30 text-[11px] font-mono text-cyan-300">
-          <Zap className="w-3 h-3 animate-pulse text-cyan-400" />
-          <span>LIVE PRODUCTION</span>
-        </div>
-      </div>
-
       {/* Interactive Node Flow Grid */}
       <div className="grid grid-cols-2 gap-3 mb-5">
         {stages.map((stage, idx) => {
